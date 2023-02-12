@@ -1,5 +1,6 @@
-from datetime import  time
+from datetime import time
 from django.db import models
+
 
 # Create your models here.
 class Meeting(models.Model):
@@ -11,6 +12,7 @@ class Meeting(models.Model):
 
     def __str__(self):
         return f"{self.title} at {self.date} {self.start_time} for {self.duration}"
+
 
 class Room(models.Model):
     name = models.CharField(max_length=50)

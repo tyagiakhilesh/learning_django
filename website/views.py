@@ -5,7 +5,7 @@ from datetime import datetime
 # Create your views here.
 
 def welcome(request):
-    return HttpResponse("Hey there. You are really welcome here!!...")
+    return render(request, "mywebsite/welcome.html")
 
 def welcome_date(request):
     return HttpResponse("Hey there. You are really welcome here!!... " + str(datetime.now()))
