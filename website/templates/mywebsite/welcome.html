@@ -16,7 +16,7 @@
   <ul>
       {% for meeting in meetings %}
       <li>
-          <a href="/meeting/{{meeting.id}}">
+          <a href="{% url 'meeting_detail' meeting.id %}">
               {{meeting.title}}
           </a> scheduled at {{meeting.date}} on {{meeting.start_time}} in room {{meeting.room}}
       </li>
