@@ -5,13 +5,23 @@
     <title>My First App</title>
 </head>
 <body>
-<p>
-  Hey there!
-  You have reached the right place.
-</p>
+<h1>Welcome to Metting Planner</h1>
 <br>
 <p>
-  Tempalted variable with name 'akey' has value {{aKey}}
+    This is a demo application for introducing django to a naive user.
+</p>
+<p>
+  <h3>List of Meetings</h3>
+
+  <ul>
+      {% for meeting in meetings %}
+      <li>
+          <a href="/meeting/{{meeting.id}}">
+              {{meeting.title}}
+          </a> scheduled at {{meeting.date}} on {{meeting.start_time}} in room {{meeting.room}}
+      </li>
+      {% endfor %}
+  </ul>
 </p>
 </body>
 </html>
