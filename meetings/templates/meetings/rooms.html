@@ -1,13 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>List of all rooms</title>
-<!--    <link rel="stylesheet" href="/static/meetings/style.css">-->
-    <link rel="stylesheet" href="{% static 'meetings/style.css' %}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}List of rooms{% endblock %}
+{% block content %}
 <h1>List of all meeting rooms</h1>
 <ul>
   {% for room in rooms %}
@@ -16,5 +9,4 @@
     </li>
   {% endfor %}
 </ul>
-</body>
-</html>
+{% endblock%}

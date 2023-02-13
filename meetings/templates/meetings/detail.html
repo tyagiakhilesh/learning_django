@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{meetingObj.title}}</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Meeting: {{meetingObj.title}}{% endblock %}
+
+{% block content %}
 There is a meeting scheduled at <b>{{meetingObj.date}} {{time}}</b> in room <b>{{meetingObj.room}}</b>
 
 <p>
     You can click <a href="{% url 'home' %}">here</a> to see all list.
 </p>
-</body>
-</html>
+{% endblock %}
